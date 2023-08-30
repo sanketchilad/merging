@@ -1,11 +1,8 @@
 package com.app.service;
 
-import java.util.List;
-
 import com.app.dto.PatientDTO;
 import com.app.pojos.Patient;
 import com.app.pojos.User;
-import com.app.pojos.UserValidity;
 
 public interface PatientService {
 	public String addPatient(Patient p); // To add Patient to patient table and his user details to user table
@@ -13,5 +10,4 @@ public interface PatientService {
 	public String editProfile(PatientDTO updatedPatient);
 	public Patient findPatientById(int p_id);
 	public void deletePatient(int id);
-	public List<Patient> getAllPatients();
 }

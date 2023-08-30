@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import com.app.custom_exceptions.ResourceNotFoundException;
 import com.app.dao.DepartmentDao;
 import com.app.dao.DoctorDao;
-import com.app.dao.UserDao;
 import com.app.dto.DoctorDTO;
 import com.app.pojos.Appointment;
 import com.app.pojos.Department;
@@ -30,10 +29,6 @@ public class DoctorServiceImpl implements DoctorService {
 	private DoctorDao doctorDao;
 	@Autowired
 	private DepartmentDao deptDao;
-	
-	@Autowired
-	private UserDao userDao;
-	
 	
 	@Autowired 
 	private JavaMailSender javaMailSender;
@@ -115,16 +110,5 @@ public class DoctorServiceImpl implements DoctorService {
 		return doctorDao.findById(id).orElse(null);
 
 	}
-//	@Override
-//	public void deleteDoctor(int id) {
-//		//Doctor d = doctorDao.findById(id).orElse(null);
-//		
-//		//int user_id = d.getUser().getId();
-//		//System.out.println(user_id);
-//	//	int dep_id =d.getDept().getId();
-//		doctorDao.deleteById(id);
-//		//userDao.deleteById(user_id);
-//		System.out.println("Doctor Deleted");
-//	}
 }
 	

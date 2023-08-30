@@ -41,7 +41,7 @@ public class Doctor {
 	private String mobileNo;
 	@Column(length = 30)
 	private String emailid;
-	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id")
 	private User user;
 	@OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL)

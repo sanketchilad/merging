@@ -1,7 +1,5 @@
 package com.app.service;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 
@@ -11,7 +9,6 @@ import com.app.dao.PatientDao;
 import com.app.dto.PatientDTO;
 import com.app.pojos.Patient;
 import com.app.pojos.User;
-import com.app.pojos.UserValidity;
 
 @Transactional
 @Service
@@ -54,12 +51,6 @@ public class PatientServiceImpl implements PatientService {
 	@Override
 	public void deletePatient(int id) {
 		patientDao.deleteById(id);
-	}
-
-	@Override
-	public List<Patient> getAllPatients() {
-		
-		return patientDao.findByUserValidity(UserValidity.ACTIVE);
 	}
 
 }
