@@ -37,7 +37,7 @@ public class Appointment {
     private String specialization;
     
     @JsonProperty(access = Access.READ_ONLY)
-    private LocalDateTime appoint;
+    private LocalDate appoint;
     
     @Enumerated(EnumType.ORDINAL)
     private Appstatus status;
@@ -82,11 +82,11 @@ public class Appointment {
 		this.specialization = specialization;
 	}
 
-	public LocalDateTime getAppoint() {
+	public LocalDate getAppoint() {
 		return appoint;
 	}
 
-	public void setAppoint(LocalDateTime appoint) {
+	public void setAppoint(LocalDate appoint) {
 		this.appoint = appoint;
 	}
 
